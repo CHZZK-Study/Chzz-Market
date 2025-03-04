@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.SimpleUrlAuthenticationFa
 @RequiredArgsConstructor
 @Configuration
 public class CustomFailureHandler extends SimpleUrlAuthenticationFailureHandler {
-    private static final String REDIRECT_URL_FAILURE = "/login?status=failure";
+    private static final String REDIRECT_URL_FAILURE = "/?status=failure";
 
     @Value("${client.url}")
     private String clientUrl;
